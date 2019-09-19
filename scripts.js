@@ -42,8 +42,57 @@ console.log(arr);
 console.log(arr.slice(1,3));
 
 //diff btn undefined and notdefined
-
 //undefined: var is declared but no value is assigned
 //hoisting(moving to top)
 console.log(z);
 var z='dd';
+
+//diff btwn == and ===
+console.log(1=='1');
+//coercion: convert data type
+
+console.log(1==='1');
+//won't apply coercion
+//trible equals is suggested
+
+//truthy falsy values
+//undefined,null,0 --> falsy
+console.log(false==0); //false by default is 0
+console.log(true==1);
+var q;//q is undefined
+console.log('q value ',!!q);
+if(!(!!q)){//doulbe egation variable
+    console.log('q');
+}
+var p=123;//p is defined
+console.log('p value',!!p);
+if(!!p){
+    console.log('p');
+}
+
+
+//es6 ---ecamscript-- standard body governs js
+//new features of es6
+let x2=3;
+const x1='10';
+
+function getResult(){
+    var f=123;
+    console.log(f);
+}
+getResult();
+//console.log(f);
+
+//var and let
+if(true){
+    var g='Gira';
+    console.log("d",g);
+}
+console.log("d",g);
+if(true){
+    let g='Gira';
+    console.log("d",g);
+}
+console.log("d",g);
+
+//arrow function
