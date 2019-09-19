@@ -127,7 +127,110 @@ class Student{
 }
 let stu=new Student('moshi',3241);
 
-//spread operator
+//4.    spread operator
 var trainee=['moshi','kael','kaig','chen'];
 var traineeCopy=['George',...trainee,'Albert'];
 console.log("LIST: ",traineeCopy);
+
+//shadow copy and deep copy
+let employee=[['John',30],['Gret',20]];
+let employeeCopy=[...employee];//shadow copy
+console.log("employeeCopy: ",employeeCopy);
+employeeCopy[0][0]='John Abraham';
+console.log("e",employeeCopy);
+console.log('Employee',employee);
+//deep copy
+let employeeDeepcopy=JSON.parse(JSON.stringify(employee));
+employeeDeepcopy[0][0]="John Abarham";
+console.log("ORIGIN",employee);
+console.log("DEEP COPY",employeeDeepcopy);
+var animal={
+    name:'Giraffle',
+    age:10
+}
+var animalCopy={...animal};
+console.log("Animal Copy",animalCopy);
+animalCopy.name="Long Giraffle";
+console.log("Animal Copy:",animalCopy);
+console.log(animal);
+var animalTwo={
+    name:'Lion',
+    livesin:{
+        placeOne:"Forest",
+        placeTwo:"cage"
+    }
+}
+//shadow copy
+var animalTwoCopy={...animalTwo};
+console.log("AnimalTwo copy: ",animalTwoCopy);
+console.log("AnimalTwo",animalTwo);
+//shadow copy
+var animalTwoCopy=JSON.parse(JSON.stringify(animalTwo));
+animalTwoCopy['livesin']['placeOne']='Wooden Cage';
+console.log("AnimalCopy",animalTwoCopy);
+console.log("original",animalTwo);
+//JSON
+console.log(JSON.stringify(animalTwo));
+
+
+//local,global,lexical scope
+function getDetail(){
+    //lexical scope
+    let name='John';
+
+    function getAddress(){
+        let city='chicago';
+        console.log(name);
+    }
+    getAddress();
+    console.log(city);
+}
+//getDetail();
+
+//closures
+function getName(){
+    let name="moshi";
+    return function(){
+        console.log(name);
+    }
+}
+console.log(getName());
+let nameCopy=getName();
+nameCopy();
+
+
+//API 
+document.querySelector('.signin');
+var signInbutton=document.getElementsByClassName('signin');
+console.log("signInbutton",signInbutton);
+var characters=document.querySelector('#characters');
+console.log("characters",characters);
+
+
+/*
+document.getElementsByClassName('signin')[0].addEventListener('click',()=>{
+    console.log("You clicked");
+})
+*/
+/*
+var el=document.getElementsByClassName('signin');
+if(el){
+    el.addEventListener('click',swapper,false);
+}*/
+
+
+document.getElementsByClassName('signin')[0].addEventListener('click',function(){
+    console.log('You clicked the signin function')
+    var characters=console.log(document.getElementsByClassName('signin'));
+    console.log(characters.innerHTML);
+    characters.innerHTML='KKK';
+    var para=document.createElement('p');
+    para.innerHTML="Star Wars";
+    document.getElementsByTagName('headerOne').appendChild(para);
+    console.log(document.getElementsByTagName('ul'));
+    //document append
+    //document.getElementsByTagName('ul')[0].appendChild();
+})
+
+//callback function
+
