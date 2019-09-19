@@ -83,7 +83,7 @@ function getResult(){
 getResult();
 //console.log(f);
 
-//var and let
+//1.    var and let
 if(true){
     var g='Gira';
     console.log("d",g);
@@ -96,3 +96,31 @@ if(true){
 console.log("d",g);
 
 //arrow function
+function getCoffee(){
+    return 'coffee';
+}
+var result=getCoffee();
+
+//2.    annoymous function
+let coffee1=function(x){
+    return 'coffee';
+}
+let annoymous=coffee1('strong');
+console.log("annoymous",annoymous);
+let coffee2=(x)=>{
+    return x+' '+'coffee';
+}
+//template literal strings
+let coffee3=(x)=>{
+    return '$(x) coffee';
+}
+
+//3.    class
+class Student{
+    constructor(name,ssn){
+        this.name=name;
+        this.ssn=ssn;
+    }
+}
+let stu=new Student('moshi',3241);
+
