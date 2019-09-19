@@ -234,3 +234,63 @@ document.getElementsByClassName('signin')[0].addEventListener('click',function()
 
 //callback function
 
+
+
+
+
+//HW create table using javascript
+let emp=[
+    {
+        Name:'Tom',
+        Age:35,
+        City:'Chicago'
+    },
+    {
+        Name:'John',
+        Age:30,
+        City:'New York'
+    },
+    {
+        Name:'Ronald',
+        Age:31,
+        City:'Austria'
+    },
+    {
+        Name:'Enice',
+        Age:29,
+        City:'London'
+    },
+    {
+        Name:'David',
+        Age:36,
+        City:'Miami'
+    }
+]
+
+//event propagation
+
+//event bubbling/event capturing
+console.log(document.querySelector('Ul'));
+
+document.querySelector('Ul').addEventListener('click',($event)=>{
+    console.log($event);
+    console.log(`You clicked ${$event.target.innerHTML}`);
+})
+document.querySelector('miami').addEventListener('click',($event)=>{
+    $event.stopPropagation();
+    $event.stopImmediatePropagation();
+})
+
+
+for(var i=0;i<document.querySelectorAll('li').length;i++){
+    document.querySelectorAll('li')[i].addEventListener('click',($event)=>{
+        console.log(`You clicked list items`);
+    })
+}
+
+//$event.preventDefault
+document.querySelector('.googleref').addEventListener('click',($event)=>{
+ 
+    $event.preventDefault();
+    console.log('you clicked the anchor')
+ })
