@@ -105,15 +105,18 @@ var result=getCoffee();
 let coffee1=function(x){
     return 'coffee';
 }
-let annoymous=coffee1('strong');
-console.log("annoymous",annoymous);
+let annoymous1=coffee1('strong');
+console.log("annoymous",annoymous1);
 let coffee2=(x)=>{
     return x+' '+'coffee';
 }
 //template literal strings
 let coffee3=(x)=>{
-    return '$(x) coffee';
+    //` backtick
+    return `Have a ${x} coffee`;
 }
+let annoymous3=coffee3('cool');
+console.log(annoymous3);
 
 //3.    class
 class Student{
@@ -124,3 +127,7 @@ class Student{
 }
 let stu=new Student('moshi',3241);
 
+//spread operator
+var trainee=['moshi','kael','kaig','chen'];
+var traineeCopy=['George',...trainee,'Albert'];
+console.log("LIST: ",traineeCopy);
