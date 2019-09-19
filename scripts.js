@@ -41,8 +41,9 @@ console.log(arr);
 
 console.log(arr.slice(1,3));
 
-//undefined and notdefined
+//diff btn undefined and notdefined
 
 //undefined: var is declared but no value is assigned
+//hoisting(moving to top)
 console.log(z);
 var z='dd';
