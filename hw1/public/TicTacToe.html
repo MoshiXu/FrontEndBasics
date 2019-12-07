@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="pragma" content="no-cache" />
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="TicTacToe.css">
+  <script>
+    //global variable
+    var count=0;
+
+    $(document).ready(function(){
+      
+      /*
+      function check(){
+        //check if first,second,third all same text context
+        //if same,print yes
+        if(("#First")[0]==("#Second")[0]&&("#Second")[0]==("#Third")[0]
+          ||("#Fourth")[0]==("#Fifth")[0]&&("#Fifth")[0]==("#Sixth")[0]
+          ||("#Seventh")[0]==("#Eighth")[0]&&("#Eighth")[0]==("#Ninth")[0]
+          ||("#First")[0]==("#Fourth")[0]&&("#Fourth")[0]==("#Seventh")[0]
+          ||("#Second")[0]==("#Fifth")[0]&&("#Fifth")[0]==("#Eighth")[0]
+          ||("#Third")[0]==("#Sixth")[0]&&("#Sixth")[0]==("#Ninth")[0]
+          ||("#First")[0]==("#Fifth")[0]&&("#Fifth")[0]==("#Ninth")[0]
+          ||("#Third")[0]==("#Fifth")[0]&&("#Fifth")[0]==("#Seventh")[0]
+          ){
+          console.log(("#First")[0]+"win");
+        }
+      }
+      */
+
+      $("#First").click(function(){
+        console.log("Btn1 Clicked!");
+        if(count%2==1){
+          $("#First").text("X");
+        }else{
+          $("#First").text("O");
+        }
+        count++;
+        
+      });
+
+      $("#Second").click(function(){
+        console.log("Btn2 Clicked!");
+        if(count%2==1){
+          $("#Second").text("X");
+        }else{
+          $("#Second").text("O");
+        }
+        count++;
+      });
+
+      $("#Third").click(function(){
+        console.log("Btn3 Clicked!");
+        if(count%2==1){
+          $("#Third").text("X");
+        }else{
+          $("#Third").text("O");
+        }
+        count++;
+        
+      });
+
+      $("#Fourth").click(function(){
+        console.log("Btn4 Clicked!");
+        if(count%2==1){
+          $("#Fourth").text("X");
+        }else{
+          $("#Fourth").text("O");
+        }
+        count++;
+        
+      });
+
+      $("#Fifth").click(function(){
+        console.log("Btn5 Clicked!");
+        if(count%2==1){
+          $("#Fifth").text("X");
+        }else{
+          $("#Fifth").text("O");
+        }
+        count++;
+        
+      });
+
+      $("#Sixth").click(function(){
+        console.log("Btn6 Clicked!");
+        if(count%2==1){
+          $("#Sixth").text("X");
+        }else{
+          $("#Sixth").text("O");
+        }
+        count++;
+        
+      });
+
+      $("#Seventh").click(function(){
+        console.log("Btn7 Clicked!");
+        if(count%2==1){
+          $("#Seventh").text("X");
+        }else{
+          $("#Seventh").text("O");
+        }
+        count++;
+        
+      });
+
+      $("#Eighth").click(function(){
+        console.log("Btn8 Clicked!");
+        if(count%2==1){
+          $("#Eighth").text("X");
+        }else{
+          $("#Eighth").text("O");
+        }
+        count++;
+        
+      });
+
+      $("#Ninth").click(function(){
+        console.log("Btn9 Clicked!");
+        if(count%2==1){
+          
+
+          $("#Ninth").text("X");
+        }else{
+          $("#Ninth").text("O");
+        }
+        count++;
+        var s = document.getElementById("#Ninth").innerHTML;
+        console.log(s);
+      });
+
+    })
+  </script>
+</head>
+<body>
+    <div class="grid-container">
+      <div class="grid-item">
+        <p id="First">
+          <button class="btn btn-primary" id="btn1"> </button>
+        </p>
+      </div>
+      <div class="grid-item">
+        <p id="Second">
+          <button class="btn btn-primary" id="btn2"> </button>
+        </p>
+      </div>
+      <div class="grid-item">
+        <p id="Third">
+          <button class="btn btn-primary" id="btn3"> </button>
+        </p>
+      </div>
+      <div class="grid-item">
+        <p id="Fourth">
+          <button class="btn btn-primary" id="btn4"></button>
+        </p>
+      </div>
+      <div class="grid-item">
+        <p id="Fifth">
+          <button class="btn btn-primary" id="btn5"></button>
+        </p>
+      </div>
+      <div class="grid-item">
+        <p id="Sixth">
+          <button class="btn btn-primary" id="btn6"></button>
+        </p>
+      </div>
+      <div class="grid-item">
+        <p id="Seventh">
+          <button class="btn btn-primary" id="btn7"></button>
+        </p>
+      </div>
+      <div class="grid-item">
+        <p id="Eighth">
+          <button class="btn btn-primary" id="btn8"></button>
+        </p>
+      </div>
+      <div class="grid-item">
+        <p id="Ninth">
+          <button class="btn btn-primary" id="btn9"></button>
+        </p>
+      </div>
+  </div>
+</body>
+</html>
